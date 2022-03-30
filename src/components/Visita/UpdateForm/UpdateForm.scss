@@ -1,0 +1,187 @@
+@import '../../../variables';
+
+.update {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9500;
+    opacity: 1;
+    transition: all 0.3s;
+    
+    &__content {
+        width: 60%; 
+        min-height: 29rem;
+        background-color: aliceblue; //TEST
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &__form {
+        flex: 0 1 90%;
+        display: flex;
+        flex-direction: column;
+
+        &__header {
+            align-self: center;
+            margin: 3rem 0;
+            text-transform: uppercase;
+            font-size: 3rem;
+            font-weight: bold;
+            letter-spacing: 0.3rem;
+            text-align: center;
+        }
+
+        &__inputs {
+            display: flex;
+            justify-content: space-around;
+
+            ///////////////////////////////
+            // Input style resets
+            &__dropdown,
+            &__date {
+                border: 0;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                font-size: 1.6rem;
+                background-color: transparent;
+            }
+            & input::-webkit-clear-button,
+            & input::-webkit-inner-spin-button,
+            & input::-webkit-calendar-picker-indicator {
+                display: none;
+            } /////////////////////////////
+
+            &__dropdown,
+            &__date {
+                width: 22rem;
+                height: 100%;
+                position: relative;
+                text-align: center;
+                font-weight: bold;
+                cursor: pointer;
+                color: inherit;
+            }
+
+            &__dropdown > option {
+                color: black;
+            }
+
+            &--input {
+                height: 5rem;
+                position: relative;
+                overflow: hidden;
+                border-bottom: 2px solid black;
+                transition: ease-in 0.3s;
+                background-color: transparent;
+                z-index: 1;
+                // background-color: aquamarine;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    transform: scaleY(0);
+                    transform-origin: bottom center;
+                    z-index: -1;
+                    background-color: rgba(118, 110, 101, 0.15);
+                    transition: transform 0.3s;
+                }
+
+                &:hover::after {
+                    transform: scaleY(1);
+                }
+
+                &:hover {
+                    color: rgb(62, 9, 207);
+                    border-bottom: 2px solid rgb(62, 9, 207);
+                }
+            }
+
+            @media only screen and (max-width: $wide_tablet) {
+                flex-direction: column;
+                align-items: center ;
+
+                &--input {
+                    width: 70%;
+                    margin-bottom: 2rem;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
+
+        &__buttons {
+            display: flex;
+            margin: 5rem auto 4rem;
+            width: 70%;
+            height: 5rem;
+            position: relative;
+            justify-content:space-between;
+
+            & button {
+                ///////////////////////////////
+                // Button style resets
+                background-color: transparent;
+                border: 0;
+                /////////////////////////////
+
+                width: 40%;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 1.6rem;
+                letter-spacing: 0.1rem;
+                cursor: pointer;
+                border-right: 3px solid black;
+                border-left: 3px solid black;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: rgba(118, 110, 101, 0.15);
+                }
+                
+                @media only screen and (max-width: $thin_tablet) {
+                    font-size: 1.4rem;
+                }
+            }
+
+            @media only screen and (max-width: $wide_phone) {
+                flex-direction: column;
+                align-items: center;
+                height: 15rem;
+                margin: 2rem auto 2rem;
+
+                & button {
+                    height: 5rem;
+                    width: 100%;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+}
+
+.update-enter {
+    opacity: 0;
+}
+.update-enter-active {
+    opacity: 1;
+    transition: all 0.2s ease-in;
+}
+.update-exit {
+    opacity: 1;
+}
+.update-exit-active {
+    opacity: 0;
+    transition: all 0.2s ease-in;
+}

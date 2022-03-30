@@ -1,0 +1,131 @@
+
+.opiniones_contenido{
+    width: 40rem;
+    height: 35rem;
+    position: relative;
+    border: $color-pink 5px dotted ;
+    background-color: rgba(255,255,255, 0.3);
+    top: 0%;
+    left: -45%;
+    margin: 1rem;
+    margin-left: 2.7rem;
+    margin-bottom: 7rem;
+    min-width: 30%;
+    transform: translateX(20%);
+    transition: .5s ease all;
+
+    @media(max-width:$mid-tablet){
+        font-size: 1.5rem;
+    }
+    @media(max-width:$thin-tablet){
+        font-size: 1.35rem;
+    }
+
+    
+}
+.imagenes--container{
+    width: 10rem;
+    height: 10rem;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(20%);
+    margin-bottom: 5rem;
+    margin: 0 auto;
+    transition: .5s ease all;
+    border-radius: 100%;
+
+}
+
+.boton_carrusel{
+    position: absolute;
+    background-color: rgba(255,255,255, 0.3);
+    width: 4rem;
+    height: 4rem;
+    top: 55%;
+    border: none;
+    font-size: 3rem;
+    border-radius: 100%;
+    padding: 5px;
+    transition: .5s ease all;
+    
+
+    cursor: pointer;
+
+    @media(max-width:$wide-screen){
+        top: 48%;
+    }
+    @media(max-width:$mid-screen){
+        top: 50%;
+    }
+    @media(max-width:1300px){
+        top: 55%;
+    }
+
+
+    &:hover{
+        transform: scale(1.2);
+    }
+    color: white;
+    text-align: center;
+
+    &--drch{
+        right: 10%;
+        @media(max-width:1300px){
+            right: 8%;
+        }
+        @media(max-width:$wide-tablet){
+            right: 10%;
+        }
+        @media(max-width:$wide-tablet){
+            right: 9%;
+        }
+        @media(max-width:$mid-tablet){
+            right: 8%;
+        }
+        @media(max-width:$thin-tablet){
+            right: 5%;
+        }
+        @media(max-width:500px){
+            right: 2%;
+        }
+    }
+    &--izq{
+        left: 10%;
+        @media(max-width:$mid-tablet){
+            left: 8%;
+        }
+        @media(max-width:$thin-tablet){
+            left: 5%;
+        }
+        @media(max-width:500px){
+            left: 5%;
+        }
+    }
+}
+
+
+.opinion_texto{
+    text-align: center;
+    margin-top: 3rem;
+    padding: .5rem;
+    color: white;
+    @media(max-width:900px){
+        font-size: 2rem;
+    }
+
+    &>h3{
+        margin-bottom:1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;        
+    }
+}
+
+.carrusel--container_exterior{
+    overflow: hidden;
+    width: 70%;
+    height: 80%;
+    position: relative;
+    left: 15%;
+    top: 10%;
+    
+}

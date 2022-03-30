@@ -1,0 +1,46 @@
+
+.header__ocio {
+    height: 100vh;
+    background-image: url("../../Recursos/img/header_ocio_x.jpg");
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    margin-bottom: 7%;
+  
+    &--index--text-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  
+    &--heading_index-primary {
+      font-family: "Montserrat";
+      text-align: center;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      letter-spacing: 1px;
+      background-image: url(../../Recursos/img/rosa.gif);
+      background-size: cover;
+      background-position: top;
+      color: transparent;
+      -moz-background-clip: text;
+      -webkit-background-clip: text;
+      text-transform: uppercase;
+      line-height: 0.75;
+      margin: 10px 0;
+  
+      &--main {
+        display: block;
+        font-weight: 700;
+        letter-spacing: 6.5rem;
+        font-size: 12rem;
+        padding-left: 5rem;
+      }
+    }
+  }

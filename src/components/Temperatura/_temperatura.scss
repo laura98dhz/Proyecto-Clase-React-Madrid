@@ -1,0 +1,32 @@
+.temperatura{
+    &--container{
+        position: absolute;
+        width: 25rem;
+        height: auto;
+        text-align: left;
+        padding: 1rem;
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        left: 42%;
+        top: 75%;
+    }
+    &--heading{
+        font-size: 1.5rem;
+        margin-right: 1rem;
+    }
+    &--grados{
+        // margin-top: 1rem;
+        // margin-bottom: -3rem;
+        font-size: 3rem;
+    }
+    &--icono{
+        width: 5rem;
+    }
+    &--precipitaciones{
+        // margin-top: -2rem;
+        font-size: 2rem;
+    }
+}

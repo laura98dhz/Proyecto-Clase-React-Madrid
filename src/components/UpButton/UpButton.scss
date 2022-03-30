@@ -1,0 +1,110 @@
+.btn__subir {
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: fixed;
+  z-index: 20;
+  padding: 13px;
+  margin: 30px 25px;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 4.2%;
+  transition: all 0.5s;
+
+  & img {
+    height: 35px;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    transition: 0.5s;
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: rotateZ(360deg);
+    &::before {
+      border: 0px;
+    }
+  }
+
+  &--index {
+    &:before {
+      border-top: 5px solid lighten(rgba(175, 59, 150), 5%);
+      border-left: 5px solid lighten(rgba(175, 59, 150), 5%);
+      border-right: 5px solid darken(rgba(175, 59, 150), 5%);
+      border-bottom: 5px solid darken(rgba(175, 59, 150), 5%);
+    }
+    &:hover {
+      box-shadow: 7px 7px darken(rgba(175, 59, 150), 20%), -7px -7px lighten(rgba(175, 59, 150), 20%);
+    }
+  }
+
+  &--ocio {
+    &:before{
+      border-top: 5px solid lighten(rgb(56, 100, 243), 5%);
+      border-left: 5px solid lighten(rgb(56, 100, 243), 5%);
+      border-right: 5px solid darken(rgb(56, 100, 243), 5%);
+      border-bottom: 5px solid darken(rgb(56, 100, 243), 5%);
+      }
+    &:hover{
+      box-shadow: 7px 7px darken(rgb(56, 100, 243), 20%), -7px -7px lighten(rgb(56, 100, 243), 20%);
+    }
+  }
+
+  &--transportes {
+    &:before{
+      border-top: 5px solid lighten(rgba(26, 194, 26), 5%);
+      border-left: 5px solid lighten(rgba(26, 194, 26), 5%);
+      border-right: 5px solid darken(rgba(26, 194, 26), 5%);
+      border-bottom: 5px solid darken(rgba(26, 194, 26), 5%);
+      }
+    &:hover{
+      box-shadow: 7px 7px darken(rgba(26, 194, 26), 20%), -7px -7px lighten(rgba(26, 194, 26), 20%);
+    }
+  }
+
+  &--cultura {
+        &:before{
+      border-top: 5px solid lighten(rgba(248, 99, 0), 5%);
+      border-left: 5px solid lighten(rgba(248, 99, 0), 5%);
+      border-right: 5px solid darken(rgba(248, 99, 0), 5%);
+      border-bottom: 5px solid darken(rgba(248, 99, 0), 5%);
+      }
+    &:hover{
+      box-shadow: 7px 7px darken(rgba(248, 99, 0), 20%), -7px -7px lighten(rgba(248, 99, 0), 20%);
+    }
+  }
+
+  &--gastronomia {
+        &:before{
+      border-top: 5px solid lighten(rgb(165, 47, 47), 5%);
+      border-left: 5px solid lighten(rgb(165, 47, 47), 5%);
+      border-right: 5px solid darken(rgb(165, 47, 47), 5%);
+      border-bottom: 5px solid darken(rgb(165, 47, 47), 5%);
+      }
+    &:hover{
+      box-shadow: 7px 7px darken(rgb(165, 47, 47), 20%), -7px -7px lighten(rgb(165, 47, 47), 20%);
+    }
+  }
+
+  &--visita {
+        &:before{
+      border-top: 5px solid lighten(rgb(62, 9, 207), 5%);
+      border-left: 5px solid lighten(rgb(62, 9, 207), 5%);
+      border-right: 5px solid darken(rgb(62, 9, 207), 5%);
+      border-bottom: 5px solid darken(rgb(62, 9, 207), 5%);
+      }
+    &:hover{
+      box-shadow: 7px 7px darken(rgb(62, 9, 207), 20%), -7px -7px lighten(rgb(62, 9, 207), 20%);
+}
+}
+}

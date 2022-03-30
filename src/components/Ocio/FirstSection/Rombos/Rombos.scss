@@ -1,0 +1,58 @@
+.rombos {
+    width:75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  margin-top: -8rem;
+    &--img {
+      z-index: 1;
+      width:23%;
+      margin-bottom: -15%;
+      transform: scale(1);
+      transition: all 0.25s;
+  
+      &-rombo{
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      }
+
+      &-circle{
+        clip-path: circle(36.1% at 50% 50%);;
+      }
+
+      &-triangle{
+        clip-path: polygon(50% 9%, 61% 35%, 87% 38%, 68% 57%, 72% 84%, 50% 70%, 27% 85%, 32% 57%, 11% 39%, 39% 35%);;
+      }
+
+      &-square{
+        clip-path: inset(25% 20% 15% 15%);
+      }
+      
+
+  
+
+      &:hover {
+        z-index: 2;
+        transform: scale(1.5);
+      }
+    }
+  }
+  
+  @media (max-width: 1100px) {
+    .rombos {
+      display: flex;
+      margin-top: 3rem;
+      
+  
+      &--img {
+       width: 12rem;
+       height: 12rem;
+        margin-bottom: 0;
+      }
+    }
+  }
+  @media (max-width: 550px) {
+    .rombos {
+      display: none;
+
+    }
+  }

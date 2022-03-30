@@ -1,0 +1,10 @@
+.voucher__read-content{
+    width: 70%;
+    margin: 0 auto;
+    box-shadow: 10 10 10 black;
+
+    &--loading{
+        position: absolute;
+        margin-left: 33.5vw;
+    }
+}

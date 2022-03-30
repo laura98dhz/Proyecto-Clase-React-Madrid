@@ -1,0 +1,180 @@
+@import '../../../variables';
+.visita__form {
+    // background-color: goldenrod;
+    width: 100%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (max-width: $mid_tablet) {
+        width: 100%;
+    }
+
+    &--inputs {
+        display: flex;
+        justify-content: space-around;
+        
+        &--input {
+            height: 5rem;
+            position: relative;
+            border-bottom: 2px solid black;
+            transition: ease-in 0.3s;
+            background-color: transparent;
+            z-index: 1;
+            text-align: center;
+            // background-color: aquamarine;
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transform: scaleY(0);
+                transform-origin: bottom center;
+                z-index: -1;
+                background-color: rgba(118, 110, 101, 0.15);
+                transition: transform 0.3s;
+            }
+
+            &:hover::after {
+                transform: scaleY(1);
+            }
+
+            &:hover {
+                color: rgb(62, 9, 207);
+                border-bottom: 2px solid rgb(62, 9, 207);
+            }
+        }
+
+        
+        ///////////////////////////////
+        // Input style resets
+        &__dropdown,
+        &__date {
+            border: 0;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            font-size: 1.6rem;
+            background-color: transparent;
+        }
+        & input::-webkit-clear-button,
+        & input::-webkit-inner-spin-button,
+        & input::-webkit-calendar-picker-indicator {
+            display: none;
+        } /////////////////////////////
+        &__dropdown,
+        &__date {
+            width: 22rem;
+            height: 100%;
+            position: relative;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            color: inherit;
+            text-overflow: ellipsis;
+            overflow-wrap: break-word;
+        }
+        
+        &__dropdown > option {
+            white-space: pre-wrap;
+            color: black;
+        }
+
+        @media only screen and (max-width: $mid_tablet) {
+            flex-direction: column;
+
+            &--input {
+                margin-bottom: 2rem;
+                & > * {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &--submit {
+        margin: 5rem 0 4rem;
+        align-self: center;
+        width: 40%;
+        height: 5rem;
+        position: relative;
+        
+        @media only screen and (max-width: $mid_tablet) {
+            width: 80%;
+        }
+
+        @media only screen and (max-width: $wide_phone) {
+            margin: 2rem 0;
+        }
+
+        &Button {
+        ///////////////////////////////
+        // Button style resets
+        background-color: transparent;
+        border: 0;
+        /////////////////////////////
+        position: absolute;
+        width: 100%;
+        height: 5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        letter-spacing: 0.1rem;
+        transition: opacity ease-in 0s 0.7s,
+                    background-color 0.3s;
+
+            &:hover {
+                background-color: rgba(118, 110, 101, 0.15);
+            }
+            
+            &:disabled {
+                color: black;
+            }
+        }
+
+        &--covers {
+            position: absolute;
+            width: 100%;
+            height: 5rem;
+            transform-origin: center;
+            pointer-events: none;
+            
+            &--L {
+                background-color: #f5f5f5;
+                border-right: 3px solid black;
+                position: absolute;
+                height: 100%;
+                width: 50%;
+                left: 0;
+                transition: transform 0.7s ease-in-out;
+            }
+            &--R {
+                background-color: #f5f5f5;
+                border-left: 3px solid black;
+                position: absolute;
+                height: 100%;
+                width: 50%;
+                right: 0;
+                transition: transform 0.7s ease-in-out;
+            }
+        }
+    }
+}
+
+.covers-enter {
+    transform: scaleY(0);
+}
+.covers-enter-active {
+    transform: scaleY(1);
+    transition: transform 0.5s;
+}
+.covers-exit {
+    transform: scaleY(1);
+}
+.covers-exit-active {
+    transform: scaleY(0);
+    transition: transform 0.5s ease-in-out 0.7s;
+}

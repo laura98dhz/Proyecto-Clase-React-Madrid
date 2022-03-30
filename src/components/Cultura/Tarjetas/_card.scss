@@ -1,0 +1,181 @@
+.cultura-museo:not(:last-child){
+    margin-right: 5rem;
+    @media(max-width:$wide-phone){
+        margin-right: 0;
+
+    }
+}
+.cultura-museo {
+    perspective: 150rem; 
+    -moz-perspective: 150rem;
+    position: relative;
+    width: 100%;
+    height: 40rem;
+    margin-bottom: 3rem;
+    
+    @media(max-width:$wide-phone){
+        width: 40%;
+        margin-bottom: -3rem;
+    }
+    @media(max-width:$mid-phone){
+        margin-left: 10rem;
+    }
+
+    &__lado {
+        width: 100%;
+        height: 40rem;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        backface-visibility: hidden; 
+        border-radius: 3px;
+        overflow: hidden; 
+        box-shadow: 0 1.5rem 4rem rgba($color-black,.15);
+
+        @media(max-width:$wide-phone){
+            height: 30rem;
+        }
+        &--delante {
+            background-color:$color-black;
+            border-radius: 15px;
+            @media(max-width:$wide-phone){
+                width: 20rem;
+            }
+        }
+
+        &--detras {
+            transform: rotateY(180deg);
+            border-radius: 15px;
+            border: white solid 4px;
+            @media(max-width:$wide-phone){
+                width: 20rem;
+            }
+            &-1 {
+                background-image: linear-gradient(to right bottom, $color-pink,$color-orange);
+            }
+            &-2 {
+                background-image: linear-gradient(to right bottom, $color-pink,$color-orange);
+            }
+            &-3 {
+                background-image: linear-gradient(to right bottom, $color-pink,$color-orange);
+            }
+            &-4 {
+                background-image: linear-gradient(to right bottom, $color-pink,$color-orange);
+            }
+        }  
+    }
+
+    &:hover &__lado--delante {
+        transform: rotateY(-180deg);
+    }
+    &:hover &__lado--detras {
+        transform: rotateY(0);
+    }
+    
+    &__imagen {
+        background-size: cover;
+        height: 30rem;
+        background-blend-mode: screen;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+        border-top-left-radius: 3px; 
+        border-top-right-radius: 3px;
+
+        &--1 {
+            background-image:url("../../Recursos/img/MuseoPrado.jpg");
+        }
+        &--2 {
+            background-image:url("../../Recursos/img/MuseoReinaSofia.jpg");
+        }
+
+        &--3 {
+            background-image:url("../../Recursos/img/MuseoThyssen.jpg");
+        }
+        &--4 {
+            background-image:url("../../Recursos/img/MuseoCienciasNaturales.jpg");
+        }
+    }
+    
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: left;
+        color: $color-white;
+        position: absolute;
+        top:25rem;
+        left: 1rem;
+        width: 95%;
+
+        @media(max-width:$wide-tablet){
+            font-size: 2rem;    
+        }
+        @media(max-width:$thin-tablet){
+            left: .5rem;
+            font-size: 1.5rem;    
+        }
+
+        &-span {
+            padding: .3rem;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+
+            &--1 {
+
+                background-image: linear-gradient(to right bottom, $color-pink,$color-orange);
+            }
+            &--2 {
+                background-image: linear-gradient(to right bottom, $color-pink,$color-orange);
+            }
+            &--3 {
+                background-image: linear-gradient(to right bottom, $color-pink,$color-orange);
+            }
+            &--4 {
+                background-image: linear-gradient(to right bottom, $color-pink,$color-orange);
+            }
+        }
+    }
+    
+    &__detalles {
+        position: absolute;
+        padding: 1rem;
+        padding-bottom: 8rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+        color: $color-white;
+        
+
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto; 
+            margin-top: 7rem;
+
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 0.75rem;
+                @media(max-width:$mid-tablet){
+                    font-size: 1.3rem;   
+                }
+                @media(max-width:$thin-tablet){
+                    font-size: 1.2rem;   
+                }
+
+                &:not(:last-child) {
+                    border-bottom: 2px solid rgb(255, 255, 255);
+                }
+            }
+        }
+    }
+          
+}
+
+
+
+
+

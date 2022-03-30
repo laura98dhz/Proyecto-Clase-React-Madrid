@@ -1,0 +1,9 @@
+.styleButton {
+  font-size: 14px;
+}
+
+.modal {
+  @media (max-width: 600px) {
+    width: 90vw;
+  }
+}

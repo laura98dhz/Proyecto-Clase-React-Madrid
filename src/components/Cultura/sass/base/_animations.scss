@@ -1,0 +1,74 @@
+@keyframes moveInLeft {
+
+    0% {
+        transform: translate(-10rem);
+    }
+    
+     100% {
+        transform: translate(0rem);
+    }
+}
+
+@keyframes headerLeft {
+    0%{  
+      transform: translate(-500%,-50%) scale(4.5);
+    }
+    50%{
+      transform: translate(200%,-50%) scale(2.5);
+    }
+    100%{
+        transform: translate(-50%,-50%) scale(1);
+    }
+}
+
+@keyframes headerBackground {
+  0%{
+      visibility: visible;
+      background-position:10% 0%;
+  }
+  50%{
+      visibility: visible;
+      background-position:91% 100%;
+  }
+  100%{
+      visibility: visible;
+      background-position:10% 0%;
+  }
+}
+
+@keyframes iconParque {
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    } 
+  }
+
+  @keyframes iconOtrasVisitas {
+    0%{
+        transform: translateY(-20%);
+    }
+    25%{
+        transform: translateY(-50%);
+    }
+    40%{
+        transform: translateY(-30%);
+    }
+    75%{
+        transform: translateY(-50%);
+    }        
+}
+
+@keyframes blink {
+    0%{   
+        background-color: $color-white;     
+    }
+    50%{
+        background-color: $color-grey-dark;
+    }
+    100%{
+        background-color: $color-white;     
+    }
+
+}

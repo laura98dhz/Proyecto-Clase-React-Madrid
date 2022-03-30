@@ -1,0 +1,23 @@
+.loading{
+    &--parques{
+        margin-left: 47%;
+        margin-top: 30%;
+    }
+    &--carrusel{
+        margin-left: 47%;
+        margin-top: 10%;
+    }
+    &--popup-otrasVisitas{
+        max-width: 100px;
+        margin-top: 25%;
+        margin-left: 45%;
+    }
+    &--popUp-parques{
+        max-width: 100px;
+        margin-left: 7%;
+        margin-top: 25%;
+    }
+    &--temperatura{
+        transform: translateX(65rem);
+    }
+}

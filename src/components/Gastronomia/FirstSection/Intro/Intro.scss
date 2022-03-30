@@ -1,0 +1,80 @@
+@import '../../../../variables';
+
+.intro {
+    &__box {
+        margin: 5rem 5rem 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: all 0.3s;
+
+        &:hover {
+            background-color: #e6e4e4;
+        }
+        &:hover .intro__text {
+            transform: translateY(1rem);
+        }
+        &:hover .intro__gallery {
+            padding: 0rem;
+        }
+
+        @media only screen and (max-width: $wide_tablet) {
+            margin: 2rem 5rem 10rem;
+        }
+
+        @media only screen and (max-width: $wide_phone) {
+            margin: 2rem 2rem 3rem;
+        }
+    }
+
+    &__text {
+        font-size: 2rem;
+        line-height: 5rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        transition: all 0.2s;
+
+        & span {
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        @media only screen and (max-width: $wide_tablet) {
+            font-size: 1.6rem;
+            line-height: 3rem;
+        }
+
+        @media only screen and (max-width: $thin_tablet) {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+    }
+
+    &__gallery {
+        display: flex;
+        transition: all 0.2s;
+        &:first-child {
+            border-radius: 2rem;
+        }
+
+        &--image {
+            width: 100%;
+            transition: all 0.2s;
+            object-fit: contain;
+
+            &:hover {
+                transform: scale(1.05) translateY(-.5rem);
+                box-shadow: 0 1rem 2rem rgba(0, 0, 0, .5);
+                z-index: 20;
+            }
+        }
+
+        &:hover &--image:not(:hover) {
+            //transform: scale(.95);
+        }
+
+        @media only screen and (max-width: $wide_phone) {
+            display: none;
+        }
+    }
+}

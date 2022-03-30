@@ -1,0 +1,56 @@
+// Para estilos relacionados con las fuentes de toda la página (tipo fuente, tamaño, etc)
+body {
+    font-size: $default-font-size;
+    font-family:sans-serif;
+}
+
+.heading_index-primary{
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+
+    &--main{
+        display: block;
+        font-weight: 700;
+        letter-spacing: 6.5rem;
+        font-size: 7rem;
+        padding-left: 5rem;
+        
+        @include respond(phone) {
+            letter-spacing: 1rem;
+        }
+        &#gastronomia {
+            color: rgb(129, 15, 0);
+            -webkit-text-stroke: 2px black;
+        }
+    }
+
+    
+    &--sub{
+        display: block;
+        font-weight: 500;
+        letter-spacing: 1rem;
+        font-size: 2rem;
+
+        @include respond(phone) {
+            letter-spacing: .5rem;
+        }
+
+    }
+}
+
+.header_index--text-box{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.heading_cultura-primary{
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    display: block;
+    font-weight: 700;
+    letter-spacing: 6.5rem;
+    font-size: 7rem; 
+    padding-left: 5rem;
+}
+
+.header_cultura--text-box{
+    background-color: rgba(255, 255, 255, 0.3);
+}

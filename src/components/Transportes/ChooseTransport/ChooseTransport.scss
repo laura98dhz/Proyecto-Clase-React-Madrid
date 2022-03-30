@@ -1,0 +1,94 @@
+.choose__transport {
+  height: 125%;
+  width: 100%;
+
+  &_options {
+    width: 80%;
+    margin: 0 auto;
+    &- {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: 5rem;
+
+      &-option {
+        border-radius: 10px;
+        margin: 1.5rem;
+        box-shadow: 0 2.5rem 4rem rgba(black, 0.5);
+        width: 16vw;
+        height: 16vw;
+        background-color: white;
+
+        &:hover {
+          transform: scale(1.1);
+          transition: 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+  & > h1 {
+    text-align: center;
+    padding-top: 3rem;
+    font-size: 2.7rem;
+    letter-spacing: 0.5rem;
+    text-shadow: 4px 4px 6px rgba(78, 78, 78, 0.842);
+  }
+}
+
+.metro {
+  cursor: pointer;
+  background-image: url("../../Recursos/img/chooseMetro.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.emt {
+  background-image: url("../../Recursos/img/chooseEmt.png");
+  cursor: pointer;
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.cercanias {
+  background-image: url("../../Recursos/img/chooseCercanias.gif");
+  cursor: pointer;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.inter {
+  background-image: url("../../Recursos/img/chooseInter.png");
+  cursor: pointer;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.ligero {
+  background-image: url("../../Recursos/img/chooseLigero.png");
+  cursor: pointer;
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media(max-width: 590px){
+  .choose__transport {
+    
+    &_options {
+      &- {
+        flex-direction: column;
+        &-option {
+          width: 40vw;
+        height: 40vw;
+          &:hover {
+            transform: none;
+          }
+        }
+      }
+    }
+  }
+
+  .ligero{
+    margin-top: -10%;
+  }
+}

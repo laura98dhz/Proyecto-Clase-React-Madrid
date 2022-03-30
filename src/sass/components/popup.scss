@@ -1,0 +1,67 @@
+.popup--transporte {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 12;
+  
+    &:target {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &__content iframe{
+      position: none;
+      margin: none;
+      width: 80%;
+      padding-bottom: 3%;
+    }
+  
+    &__body {
+      transform: translateY(15vh); 
+      width: 60%;
+      height: 70%;
+      padding: 2%;
+      border-radius: 15px;
+      box-shadow: 0 0 5px #ccc;
+      background: #fff;
+      position: relative;
+      transition: ease-in-out;
+      animation-name: moveIcons;
+      animation-duration: 3s;
+      margin: 5% auto;
+    }
+    &__close {
+      position: absolute;
+      top: 6px;
+      right: 15px;
+      transition: ease-in-out;
+      animation-name: moveIcons;
+      animation-duration: 3s;
+      font-size: 5rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: rgb(255, 0, 0);
+      text-shadow: 3px 3px 20px rgb(0, 0, 0);
+    }
+  }
+
+
+  @include respond(tab-port) {
+    .popup--transporte {  
+      &__body {
+        height: 60%;
+      }
+
+      &__content iframe{
+        position: relative;
+        margin: 0 auto;
+        padding-bottom: 10%;
+      }
+    }
+  }

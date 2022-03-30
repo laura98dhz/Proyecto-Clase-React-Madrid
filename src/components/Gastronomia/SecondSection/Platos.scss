@@ -1,0 +1,44 @@
+@import '../../../variables';
+
+.platos {
+    background-color: #766E65;
+    box-shadow: 0 0 5rem 5rem #766E65;
+    margin-bottom: 10rem;
+    &__titulo {
+        text-align: center;
+        padding-top: 2rem;
+        
+        &--heading {
+            background-image: linear-gradient(to right, rgb(143, 28, 12), rgb(94, 14, 14));
+            -webkit-background-clip: text;
+            color: transparent;
+
+            text-transform: uppercase;
+            font-size: 4rem;
+            font-weight: bold;
+            letter-spacing: 1rem;
+            display: inline-block;
+            transition: all 0.1s;
+            &:hover {
+                transform: scale(1.05) translateY(0.5rem);
+                text-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+            }
+            
+            @media only screen and (max-width: $thin_tablet) {
+                letter-spacing: 0.6rem;
+            }
+
+            @media only screen and (max-width: $wide_phone) {
+                font-size: 3rem;
+            }
+        }
+
+        @media only screen and (max-width: $wide_phone) {
+            padding-top: 0;
+        }
+    }
+
+    @media only screen and (max-width: $wide_phone) {
+        box-shadow: 0 0 3rem 3rem #766E65;
+    }
+}

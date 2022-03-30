@@ -1,0 +1,83 @@
+.header_index {
+  background-color: rgb(189, 189, 192);
+  height: 45vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.1),
+      rgba(7, 7, 7, 0.5)
+    ),
+    url("../Recursos/img/fondo-header.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &--text-box {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 70rem;
+
+    @media (max-width: 800px) {
+      width: 35rem;
+    }
+
+    @media (max-width: 350px) {
+      width: 25rem;
+    }
+  }
+}
+
+.heading_index-primary {
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  &--main {
+    letter-spacing: 2rem;
+    font-size: 5rem;
+    margin-left: 2.5rem;
+
+    @media (max-width: 600px) {
+      letter-spacing: 1rem;
+    }
+    &#gastronomia {
+      color: rgb(129, 15, 0);
+      -webkit-text-stroke: 2px black;
+    }
+
+    @media (max-width: 350px) {
+      font-size: 3rem;
+    }
+  }
+
+  &--sub {
+    font-weight: 500;
+    font-size: 2rem;
+    letter-spacing: 1rem;
+
+    @media (max-width: 600px) {
+      letter-spacing: 0.5rem;
+    }
+
+    @media (max-width: 527px) {
+      display: none;
+    }
+  }
+}
+
+.header_index--text-box {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.heading_cultura-primary {
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  display: block;
+  font-weight: 700;
+  letter-spacing: 6.5rem;
+  font-size: 7rem;
+  padding-left: 5rem;
+}

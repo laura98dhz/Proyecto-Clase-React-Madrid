@@ -1,0 +1,357 @@
+
+
+.card--ocio {
+  perspective: 150rem; // perspective works on child elements
+  -moz-perspective: 150rem;
+  position: relative;
+  /* Perspective has gone because when we use position absolute the parent(.card--ocio), has width of zero pixels.
+     Here we can not use the clearfix trick, so
+     we add the same height of their childrens */
+  height: 24rem;
+  width: 72%;
+
+  &__side {
+    height: 30rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden; // It hides the back side of the component
+    border-radius: 3px;
+    overflow: hidden; // image was overflowing the parent, so the corners were no rounder. This is a fix.
+    box-shadow: 0 1.5rem 4rem rgba($color-black-ocio, 0.15);
+    border: 1px solid #000000;
+
+    &--back {
+      transform: rotateY(180deg);
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light-ocio,
+          $color-secondary-dark-ocio
+        );
+      }
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light-ocio,
+          $color-primary-dark-ocio
+        );
+      }
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light-ocio,
+          $color-tertiary-dark-ocio
+        );
+      }
+      &-4 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-quaternary-light-ocio,
+          $color-quaternary-dark-ocio
+        );
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+  &__cta {
+    margin-top: 2rem;
+
+    & img {
+      width: 17rem;
+      height: 12rem;
+      display: block;
+      margin: 0 auto;
+    }
+    & p {
+      text-align: center;
+      color: rgb(252, 246, 246);
+      margin-left: 4rem;
+      margin-right: 4rem;
+    }
+
+    & a {
+      text-align: center;
+      color: rgb(252, 246, 246);
+      margin-top: 2rem;
+      margin-left: 15rem;
+    }
+  }
+
+  @include respond(tab-port) {
+    .card--ocio {
+      margin-bottom: 10vh;
+
+      &__side {
+        backface-visibility: visible;
+
+        &__side--front {
+          transform: unset;
+          visibility: hidden;
+        }
+        &--back {
+          transform: unset;
+        }
+      }
+
+      &__cta {
+        margin-top: 2rem;
+
+        & img {
+          width: 17rem;
+          height: 12rem;
+          display: block;
+          margin: 0 auto;
+        }
+        & p {
+          text-align: center;
+          color: rgb(252, 246, 246);
+          margin-left: 4rem;
+          margin-right: 4rem;
+        }
+
+        & a {
+          text-align: center;
+          color: rgb(252, 246, 246);
+          margin-top: 2rem;
+          margin-left: 15rem;
+        }
+      }
+    }
+  }
+}
+
+@include respond(phone) {
+  .card--ocio {
+    margin-bottom: 10vh;
+
+    &__side {
+      backface-visibility: visible;
+
+      &__side--front {
+        transform: unset;
+        visibility: hidden;
+      }
+      &--back {
+        transform: unset;
+      }
+    }
+
+    &__cta {
+      margin-top: 2rem;
+
+      & img {
+        width: 17rem;
+        height: 12rem;
+        display: block;
+        margin: 0 auto;
+      }
+      & p {
+        text-align: center;
+        color: rgb(252, 246, 246);
+        margin-left: 4rem;
+        margin-right: 4rem;
+      }
+
+      & a {
+        text-align: center;
+        color: rgb(252, 246, 246);
+        margin-top: 2rem;
+        margin-left: 15rem;
+      }
+    }
+  }
+}
+
+.cultura-museo {
+  perspective: 150rem; 
+  -moz-perspective: 150rem;
+  position: relative;
+
+  height: 40rem;
+
+  &__lado {
+      height: 40rem;
+      transition: all .8s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      backface-visibility: hidden; 
+      border-radius: 3px;
+      overflow: hidden; 
+      box-shadow: 0 1.5rem 4rem rgba($color-black,.15);
+      
+      &--delante {
+          background-color:$color-black;
+      }
+
+      &--detras {
+          transform: rotateY(180deg);
+          &-1 {
+              background-image: linear-gradient(to right bottom, $color-pink,$color-orange);
+          }
+          &-2 {
+              background-image: linear-gradient(to right bottom, $color-pink,$color-orange);
+          }
+          &-3 {
+              background-image: linear-gradient(to right bottom, $color-pink,$color-orange);
+          }
+          &-4 {
+              background-image: linear-gradient(to right bottom, $color-pink,$color-orange);
+          }
+      }
+  }
+
+  &:hover &__lado--delante {
+      transform: rotateY(-180deg);
+  }
+  &:hover &__lado--detras {
+      transform: rotateY(0);
+  }
+
+&__imagen {
+      background-size: cover;
+      height: 30rem;
+      background-blend-mode: screen;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+      border-top-left-radius: 3px; 
+      border-top-right-radius: 3px;
+
+      &--1 {
+          background-image:url("../Recursos/img/museo-prado.jpg");
+      }
+      &--2 {
+          background-image:url("../Recursos/img/museo-reina-sofia.jpg");
+      }
+
+      &--3 {
+          background-image:url("../Recursos/img/museo-thyssen.jpg");
+      }
+      &--4 {
+          background-image:url("../Recursos/img/Museo-Ciencias-Naturales.jpg");
+      }
+  }
+  &__heading {
+      font-size: 2.8rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      text-align: left;
+      color: $color-white;
+      position: absolute;
+      top:25rem;
+      left: 2rem;
+      width: 95%;
+
+      &-span {
+          padding: .3rem;
+          -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+          
+          &--1 {
+              background-image: linear-gradient(to right bottom, $color-pink,$color-orange);
+          }
+          &--2 {
+              background-image: linear-gradient(to right bottom, $color-pink,$color-orange);
+          }
+          &--3 {
+              background-image: linear-gradient(to right bottom, $color-pink,$color-orange);
+          }
+          &--4 {
+              background-image: linear-gradient(to right bottom, $color-pink,$color-orange);
+          }
+      }
+  }
+  
+  &__detalles {
+      position: absolute;
+      padding: 1rem;
+      padding-bottom: 8rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      text-align: center;
+      color: $color-white;
+
+      ul {
+          list-style: none;
+          width: 80%;
+          margin: 0 auto; 
+          margin-top: 7rem;
+
+          li {
+              text-align: center;
+              font-size: 1.5rem;
+              padding: 0.75rem;
+
+              &:not(:last-child) {
+                  border-bottom: 2px solid rgb(255, 255, 255);
+              }
+          }
+      }
+  }
+        
+  @include respond(tab-port) {
+  
+      height: auto;
+      border-radius: 3px;
+      background-color: $color-white;
+      box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+      
+      &__imagen{
+          clip-path: none;
+      }
+
+      &__lado {
+          height: auto;
+          position: relative;
+          box-shadow: none; 
+          
+          &--detras{
+              transform: rotateY(0);
+          }  
+      } 
+      
+      
+      &:hover &__lado--delante {
+          transform: rotateY(0);
+      }
+             
+      &__detalles {
+          padding: 1rem 3rem;
+          position: relative;
+          top: 0%;
+          left: 0;
+          transform: translate(0);
+          width: 100%;
+          margin-top: -7rem;
+          
+          ul{
+              li{
+                  font-size: 2rem;
+
+              }
+          }
+      }  
+
+      &__heading {
+          top:20rem;
+      }
+
+  }      
+}
+
+
+
+
+
+
